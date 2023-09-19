@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\homeController;
+use App\Http\Controllers\egresadosController;
+use App\Http\Controllers\formularioController;
+use App\Http\Controllers\proximosGraduadosController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +17,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', function () {return view('welcome');});
+
+Route::get('/',[homeController::class, 'index'])->name('home');
+Route::resource('/diligenciar-formulario',formularioController::class);
+Route::resource('/listado-proximo-graduado',proximosGraduadosController::class);
+Route::resource('/lista-egresados',egresadosController::class);
