@@ -1,1 +1,10 @@
-Soy formulario
+@extends('home.index')
+
+@section('content')
+
+Soy diligenciar formulario
+
+@endsection
+
+
+
