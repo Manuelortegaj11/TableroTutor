@@ -342,10 +342,12 @@
   </div>
 -->
 </div>
+    <div class="container mx-auto">
     <footer class="footer p-10 bg-unimagBlue2 text-base-content">
             <div class="container mx-auto flex justify-between items-center">
                 </div>
     </footer>
+    </div>
 
 
 </html>

@@ -3,7 +3,7 @@
 @section('content')
 
 <section class="gradient-form h-full bg-neutral-200 dark:bg-neutral-200 min-h-screen">
-  <div class="p-8">
+  <div class="p-4">
     <div class="container mx-auto">
         <div class="g-6 flex h-full flex-wrap items-center justify-center text-neutral-800 dark:text-neutral-200">
             <div class="w-full justify-center ">
