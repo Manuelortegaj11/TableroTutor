@@ -4,8 +4,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,700" rel="stylesheet">
     @vite('resources/css/app.css')
     <style>
         #menu-icon.active {
@@ -32,7 +34,7 @@
     <nav class="bg-unimagBlue p-4">
         <div class="container mx-auto flex justify-between items-center">
             <a href="/" class="text-white flex items-center">
-                <img src="{{ asset('unimagdefault.png') }}" alt="Logo" class="h-20 mr-10">
+                <img src="{{ asset('unimagdefault.png') }}" alt="Logo" class="h-20 mr-2">
 
                 <span class="text-1xl font-sans">TABLERO</span>
     <br>
@@ -45,7 +47,7 @@
                         <path fill="currentColor" d="M4 18h16a1 1 0 010 2H4a1 1 0 010-2zm0-6h16a1 1 0 010 2H4a1 1 0 010-2zm0-6h16a1 1 0 010 2H4a1 1 0 010-2z" />
                     </svg>
                 </button>
-                <ul id="mobile-menu" class="hidden bg-unimagBlue text-white absolute w-full mt-3 left-0">
+                <ul id="mobile-menu" class="hidden bg-unimagBlue text-white absolute w-full mt-9 left-0">
                     <li class="block px-4 py-2 border-b-2 dark:hover:bg-unimagOrange border-white-500"><a href="/diligenciar-formulario">Diligenciar Formulario</a></li>
                     <li class="block px-4 py-2 border-b-2 dark:hover:bg-unimagOrange border-white-500"><a href="/listado-proximo-graduado">Lista de Próximos Graduados</a></li>
                     <li class="block px-4 py-2 border-b-2 dark:hover:bg-unimagOrange border-unimagOrange"><a href="/lista-egresados">Lista de Egresados</a></li>
@@ -342,11 +344,31 @@
   </div>
 -->
 </div>
-    <footer class="footer p-10 bg-unimagBlue2 text-base-content">
 
-    <div class="container mx-auto">
+
+<footer class="footer p-4 bg-unimagBlue2 text-base-content">
+
+<div class="text-center md:text-left max-w-screen-lg mx-auto">
+
+<div class="text-center max-w-screen-lg mx-auto font-roboto text-white">
+    <div class="block mb-2">
+        <h3 class="mb-2 text-xl font-sans font-bold">Contact info</h3>
+        <ul>
+            <li>Línea Gratuita Nacional: 01 8000 180 504. PBX: (57 - 5) 4381000 - 4365000</li>
+            <li><a href="https://goo.gl/maps/tad2rQS5Jqj" target="_blank" rel="noopener noreferrer">Dirección: Carrera 32 No 22 – 08 Santa Marta D.T.C.H. - Colombia. Código Postal No. 470004</a></li>
+            <li><a href="mailto:contacto@unimagdalena.edu.co" target="_blank" rel="noopener noreferrer">Email: ciudadano@unimagdalena.edu.co</a></li>
+        </ul>
+    </div>
+    <div class="block mb-2">
+        <p class="infoContacto">La Universidad del Magdalena está sujeta a inspección y vigilancia por el Ministerio de Educación Nacional.</p>
+    </div>
+    <div class="block mb-4">
+        <p>Desarrollado por el Centro de Investigación y Desarrollo de Software CIDS - Unimagdalena © 2018</p>
+                    </div>
                 </div>
-    </footer>
+        </div>
+    </div>
+</footer>
 
 
 </html>
