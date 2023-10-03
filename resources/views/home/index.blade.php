@@ -9,7 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,700" rel="stylesheet">
     @vite('resources/css/app.css')
-
 <style>
         #menu-icon.active {
             animation: spin 0.5s forwards;
@@ -60,33 +59,8 @@
     }
   }
 </style>
-<style>
-  .fixed-navbar {
-    position: fixed;
-    top: 0; /* Ajusta la posición vertical como desees */
-    left: 0; /* Ajusta la posición horizontal como desees */
-    width: 100%; /* Ocupará todo el ancho de la ventana */
-    z-index: 999; /* Ajusta la elevación según sea necesario */
-  }
-</style>
-<style>
-  .middle-section {
-    position: relative;
-    top: 100%; /* Coloca la sección en el centro vertical de la pantalla */
-    transform: translateY( 50%); /* Ajusta la posición vertical para que esté centrada */
-    left: 0; /* Ajusta la posición horizontal según sea necesario */
-    width: 100%; /* Ocupará todo el ancho de la pantalla */
-  }
-  @media (max-width: 767px) {
-    .middle-section-mobile {
-      position: relative;
-      top: auto;
-      transform: translateY(0);
-      margin-top: 25%;
-      bottom: 0; /* Coloca la sección en la parte inferior de la pantalla */
-    }
-}
-</style>
+
+
 
 </head>
 
