@@ -1,9 +1,42 @@
 @extends('home.index')
 
-@section('content')
 
-<section class=" gradient-form h-full bg-neutral-200 dark:bg-neutral-200 min-h-screen">
-  <div class="middle-section middle-section-mobile py-12 px-4">
+
+
+@section('content')
+<style>
+  .fixed-navbar {
+    position: fixed;
+    top: 0; /* Ajusta la posición vertical como desees */
+    left: 0; /* Ajusta la posición horizontal como desees */
+    width: 100%; /* Ocupará todo el ancho de la ventana */
+    z-index: 999; /* Ajusta la elevación según sea necesario */
+  }
+</style>
+<style>
+  .middle-section {
+    position: relative;
+    top: 100%; /* Coloca la sección en el centro vertical de la pantalla */
+    transform: translateY( 35%); /* Ajusta la posición vertical para que esté centrada */
+    left: 0; /* Ajusta la posición horizontal según sea necesario */
+    width: 100%; /* Ocupará todo el ancho de la pantalla */
+    text-align: center
+  }
+  @media (max-width: 967px) {
+    .middle-section-mobile {
+      position: relative;
+      top: auto;
+      transform: translateY(0);
+      margin-top: 25%;
+      bottom: 0; /* Coloca la sección en la parte inferior de la pantalla */
+    }
+}
+</style>
+
+
+
+<section class="bg-neutral-200 dark:bg-neutral-200 min-h-screen">
+  <div class="middle-section middle-section-mobile py-8 px-4">
     <div class="container mx-auto">
         <div class="g-6 flex h-full flex-wrap items-center justify-center text-neutral-800 dark:text-neutral-200">
             <div class="w-full justify-center ">
@@ -15,13 +48,13 @@
 
 <section class="p-12">
 
-<div class="flex flex-wrap -mx-4">
+<div class="flex flex-wrap -mx-12">
 
 <!-- Servicio 1 -->
 <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-4">
     <div class="bg-gray-200 text-black p-6 rounded-lg shadow">
         <h2 class="flex items-center">
-            <a href="URL_DEL_ENLACE" class="flex items-center text-xl font-semibold mb-2">
+            <a href="/antes-grado" class="flex items-center text-xl font-semibold mb-2">
                 <svg width="30px" height="30px" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                     <rect fill="none" height="6" rx="2" width="34" x="33" y="50"/>
                     <rect fill="none" height="6" rx="2" width="30" x="33" y="62"/>
