@@ -54,7 +54,7 @@
 <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-4">
     <div class="bg-gray-200 text-black p-6 rounded-lg shadow">
         <h2 class="flex items-center">
-            <a href="/antes-grado" class="flex items-center text-xl font-semibold mb-2">
+            <a href="/formularios/create" class="flex items-center text-xl font-semibold mb-2">
                 <svg width="30px" height="30px" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                     <rect fill="none" height="6" rx="2" width="34" x="33" y="50"/>
                     <rect fill="none" height="6" rx="2" width="30" x="33" y="62"/>

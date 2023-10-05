@@ -155,7 +155,7 @@
                     </svg>
                 </button>
                 <ul id="mobile-menu" class="hidden bg-unimagBlue text-white absolute w-full mt-6 left-0">
-                    <li class="block px-4 py-2 border-b-2 dark:hover:bg-unimagOrange border-white-500"><a href="/diligenciar-formulario">Diligenciar Formulario</a></li>
+                    <li class="block px-4 py-2 border-b-2 dark:hover:bg-unimagOrange border-white-500"><a href="/formularios">Diligenciar Formulario</a></li>
                     <li class="block px-4 py-2 border-b-2 dark:hover:bg-unimagOrange border-white-500"><a href="/listado-proximo-graduado">Lista de Próximos Graduados</a></li>
                     <li class="block px-4 py-2 border-b-2 dark:hover:bg-unimagOrange border-unimagOrange"><a href="/lista-egresados">Lista de Egresados</a></li>
                 </ul>
@@ -173,7 +173,7 @@
     </svg>
   </button>
                         <ul class="hidden absolute bg-unimagBlue text-white mt-2 space-y-2 left-0">
-                            <li class="block px-4 py-2 dark:hover:bg-unimagOrange dark:hover:text-white border-b-2 border-white-700"><a href="/diligenciar-formulario">Diligenciar Formulario</a></li>
+                            <li class="block px-4 py-2 dark:hover:bg-unimagOrange dark:hover:text-white border-b-2 border-white-700"><a href="/formularios">Diligenciar Formulario</a></li>
                             <li class="block px-4 py-2 dark:hover:bg-unimagOrange dark:hover:text-white border-b-2 border-white-700"><a href="/listado-proximo-graduado">Lista de Próximos Graduados</a></li>
                             <li class="block px-4 py-2 dark:hover:bg-unimagOrange dark:hover:text-white border-b-2 border-unimagOrange"><a href="/lista-egresados">Lista de Egresados</a></li>
                        </ul>

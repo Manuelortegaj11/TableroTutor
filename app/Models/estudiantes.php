@@ -10,6 +10,7 @@ class Estudiante extends Model
     use HasFactory;
 
     protected $fillable = [
+        'fecha_realizacion',
         'nombre_completo',
         'codigo_estudiantil',
         'programa_cursado',

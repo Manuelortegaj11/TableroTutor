@@ -10,4 +10,9 @@ class antesGradoController extends Controller
     {
     return view('antesdelgrado.index');
     }
+    public function create()
+    {
+    return view('antesdelgrado.create');
+    }
+
 }

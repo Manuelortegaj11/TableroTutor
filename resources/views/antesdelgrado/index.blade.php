@@ -1,71 +1,13 @@
-@extends('home.index')
-@section('content')
-<style>
-   .tabcontent {
-   display: none;
-   }
-   .active {
-   background-color: #ddd;
-   }
-   #botonesEnvio {
-   display: none;
-   }
-   body.modal-open {
-   overflow: hidden; /* Oculta la barra de desplazamiento cuando el modal está abierto */
-   }
-   .modal {
-   display: none;
-   position: fixed;
-   z-index: 1;
-   left: 0;
-   top: 0;
-   width: 100%;
-   height: 100%;
-   overflow: auto;
-   background-color: rgba(0,0,0,0.4);
-   }
-   .modal-content {
-   background-color: #fefefe;
-   margin: 15% auto;
-   padding: 20px;
-   border: 1px solid #888;
-   width: 40%;
-   }
-   .close {
-   color: #aaa;
-   float: right;
-   font-size: 28px;
-   font-weight: bold;
-   }
-   .close:hover,
-   .close:focus {
-   color: black;
-   text-decoration: none;
-   cursor: pointer;
-   }
-   /* Estilos del botón de abrir ventana emergente */
-   #openModalBtn {
-   padding: 10px;
-   cursor: pointer;
-   }
-   /* Estilos de responsividad */
-   @media screen and (max-width: 600px) {
-   .modal-content {
-   width: 90%;
-   }
-   }
-</style>
-<section class=" gradient-form h-full bg-neutral-200 dark:bg-neutral-200 min-h-screen">
-   <button id="openModalBtn">Abrir Ventana Emergente</button>
+
    <div id="myModal" class="modal">
       <div class="modal-content font-roboto">
          <span class="close" id="closeModal">&times;</span>
          <div class="flex justify-center mb-2">
-            <button class="tablinks bg-unimagBlue hover:bg-unimagOrange text-white font-bold py-1 px-1 rounded-l border-r border-white" onclick="openTab(event, 'tab1')">Datos básicos</button>
-            <button class="tablinks bg-unimagBlue hover:bg-unimagOrange text-white font-bold py-1 px-1 border-r border-white" onclick="openTab(event, 'tab2')">Saber Pro</button>
-            <button class="tablinks bg-unimagBlue hover:bg-unimagOrange text-white font-bold py-1 px-1 border-r border-white" onclick="openTab(event, 'tab3')">Inglés</button>
-            <button class="tablinks bg-unimagBlue hover:bg-unimagOrange text-white font-bold py-1 px-1 border-r border-white" onclick="openTab(event, 'tab4')">Opción de grado</button>
-            <button class="tablinks bg-unimagBlue hover:bg-unimagOrange text-white font-bold py-1 px-1 rounded-r" onclick="openTab(event, 'tab5')">General</button>
+            <a class="tablinks bg-unimagBlue hover:bg-unimagOrange text-white font-bold py-1 px-1 rounded-l border-r border-white" onclick="openTab(event, 'tab1')">Datos básicos</a>
+            <a class="tablinks bg-unimagBlue hover:bg-unimagOrange text-white font-bold py-1 px-1 border-r border-white" onclick="openTab(event, 'tab2')">Saber Pro</a>
+            <a class="tablinks bg-unimagBlue hover:bg-unimagOrange text-white font-bold py-1 px-1 border-r border-white" onclick="openTab(event, 'tab3')">Inglés</a>
+            <a class="tablinks bg-unimagBlue hover:bg-unimagOrange text-white font-bold py-1 px-1 border-r border-white" onclick="openTab(event, 'tab4')">Opción de grado</a>
+            <a class="tablinks bg-unimagBlue hover:bg-unimagOrange text-white font-bold py-1 px-1 rounded-r" onclick="openTab(event, 'tab5')">General</a>
          </div>
          <!-- Contenido de las pestañas -->
          <div id="tab1" class="tabcontent hidden">
@@ -75,19 +17,19 @@
                <!-- Resto de tu contenido aquí -->
                <div class="mb-2">
                   <label class="block text-gray-700 text-sm font-bold mb-1" for="fecha">Fecha de realización del formulario:</label>
-                  <input type="text" id="fecha" class="appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline">
+                  <input type="date" name="fecha_realizacion" id="fecha_realizacion" value="{{ isset($empleado->Nombre)?$empleado->Nombre:old("Nombre") }}" class="appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline">
                </div>
                <div class="mb-2">
                   <label class="block text-gray-700 text-sm font-bold mb-1" for="nombre">Nombre completo del estudiante:</label>
-                  <input type="text" id="nombre" class="appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline">
+                  <input type="text" name="nombre_completo" id="nombre_completo" class="appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline">
                </div>
                <div class="mb-2">
                   <label class="block text-gray-700 text-sm font-bold mb-1" for="codigo">Código estudiantil:</label>
-                  <input type="text" id="codigo" class="appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline">
+                  <input type="text" name="codigo_estudiantil" id="codigo_estudiantil"  class="appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline">
                </div>
                <div class="mb-2">
                   <label class="block text-gray-700 text-sm font-bold mb-1" for="programa">Programa cursado:</label>
-                  <select id="condicionalDerecho" name="carrera" class="block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
+                  <select name="programa_cursado" id="programa_cursado" class="block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
                      <option value="">Selecciona una carrera</option>
                      <option value="admin_empresas">Administración de Empresas</option>
                      <option value="admin_empresas_turisticas">Administración de Empresas Turísticas y Hoteleras</option>
@@ -129,15 +71,15 @@
                </div>
                <div class="mb-2">
                   <label class="block text-gray-700 text-sm font-bold mb-1" for="telefono">Teléfono:</label>
-                  <input type="text" id="telefono" class="appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline">
+                  <input type="text" name="telefono" id="telefono" class="appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline">
                </div>
                <div class="mb-2">
                   <label class="block text-gray-700 text-sm font-bold mb-1" for="correo">Correo institucional:</label>
-                  <input type="text" id="correo" class="appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline">
+                  <input type="text" name="correo_institucional" id="correo_institucional" class="appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline">
                </div>
                <div class="mb-2">
                   <label class="block text-gray-700 text-sm font-bold mb-1" for="ubicacion">Ubicación de residencia:</label>
-                  <input type="text" id="ubicacion" class="appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline">
+                  <input type="text" name="ubicacion_residencia" id="ubicacion_residencia" class="appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline">
                </div>
             </div>
          </div>
@@ -342,10 +284,65 @@
             </div>
          </div>
          <div id="botonesEnvio" class="flex justify-center space-x-2">
-            <button type="submit" class=" bg-unimagBlue hover:bg-green-500 text-white font-bold py-2 px-2 rounded-lg border-r border-white">Enviar</button>
+            <input type="submit" class=" bg-unimagBlue hover:bg-green-500 text-white font-bold py-2 px-2 rounded-lg border-r border-white" value="Enviar datos"></input>
          </div>
       </div>
    </div>
+<style>
+   .tabcontent {
+   display: none;
+   }
+   .active {
+   background-color: #ddd;
+   }
+   #botonesEnvio {
+   display: none;
+   }
+   body.modal-open {
+   overflow: hidden; /* Oculta la barra de desplazamiento cuando el modal está abierto */
+   }
+   .modal {
+   display: none;
+   position: fixed;
+   z-index: 1;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   overflow: auto;
+   background-color: rgba(0,0,0,0.4);
+   }
+   .modal-content {
+   background-color: #fefefe;
+   margin: 15% auto;
+   padding: 20px;
+   border: 1px solid #888;
+   width: 40%;
+   }
+   .close {
+   color: #aaa;
+   float: right;
+   font-size: 28px;
+   font-weight: bold;
+   }
+   .close:hover,
+   .close:focus {
+   color: black;
+   text-decoration: none;
+   cursor: pointer;
+   }
+   /* Estilos del botón de abrir ventana emergente */
+   #openModalBtn {
+   padding: 10px;
+   cursor: pointer;
+   }
+   /* Estilos de responsividad */
+   @media screen and (max-width: 600px) {
+   .modal-content {
+   width: 90%;
+   }
+   }
+</style>
    <script>
       // Script para mostrar/ocultar el campo de observaciones según la respuesta a la primera pregunta
       const radios = document.querySelectorAll('input[name="grado"]');
@@ -417,7 +414,7 @@
    </script>
    <script>//Tab 2
       // Manejar la visibilidad de los elementos según el condicional si estudia derecho o otro
-        document.getElementById('condicionalDerecho').addEventListener('change', function () {
+        document.getElementById('programa_cursado').addEventListener('change', function () {
           if (this.value === 'Derecho') {
               programaDerecho.style.display = 'block';
           } else {
@@ -488,5 +485,4 @@
         document.getElementById('correo').innerText = 'correo@institucional.com';
         document.getElementById('ubicacion').innerText = 'Ubicación de Residencia';
    </script>
-</section>
-@endsection
+
