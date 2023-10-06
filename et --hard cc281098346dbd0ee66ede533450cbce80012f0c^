@@ -1,0 +1,82 @@
+[33mcommit 45ae8fd18399149b1a4b79dbfa2931abf685d4d7[m[33m ([m[1;36mHEAD -> [m[1;32mMEOJ[m[33m, [m[1;32mUnion[m[33m)[m
+Merge: 59c9df4 d76422d
+Author: Manuelortegaj11 <manuelortegajuvinao@gmail.com>
+Date:   Wed Oct 4 16:28:31 2023 -0500
+
+    Merge branch 'DBmodelForm' into Union
+
+[33mcommit 59c9df481cf5f7ee0cbbc610d4d37ca2e194be03[m[33m ([m[1;31morigin/FrontOfForm[m[33m, [m[1;32mFrontOfForm[m[33m)[m
+Author: Manuelortegaj11 <manuelortegajuvinao@gmail.com>
+Date:   Mon Oct 2 19:33:07 2023 -0500
+
+    Finalizando front formulario
+
+[33mcommit 5ee42e5e3b72b17f9743cb01fc7ce3298eeaa2a8[m[33m ([m[1;31morigin/HomePage[m[33m, [m[1;32mHomePage[m[33m)[m
+Author: Manuelortegaj11 <manuelortegajuvinao@gmail.com>
+Date:   Tue Sep 26 21:48:55 2023 -0500
+
+    Finalizando el nav, footer base y vista principal
+
+[33mcommit 4089a3cac4f0a7530c4328fa03c8568973218a08[m
+Author: Manuelortegaj11 <manuelortegajuvinao@gmail.com>
+Date:   Mon Sep 25 21:31:00 2023 -0500
+
+    Mejoras diligenciar formulario
+
+[33mcommit d76422d71d32fa384f06b56eb194a9ae014865f6[m[33m ([m[1;31morigin/DBmodelForm[m[33m, [m[1;32mDBmodelForm[m[33m)[m
+Author: xhlar <mauricio@xhlar.com>
+Date:   Mon Sep 25 17:43:52 2023 -0500
+
+    añadiendo migraciones y modelos del formulario
+    
+    Signed-off-by: xhlar <mauricio@xhlar.com>
+
+[33mcommit 89be48302c1108e1cd536fbb28c6d72ab2e9924b[m
+Author: xhlar <mauricio@xhlar.com>
+Date:   Mon Sep 25 17:43:47 2023 -0500
+
+    añadiendo migraciones y modelos del formulario
+    
+    Signed-off-by: xhlar <mauricio@xhlar.com>
+
+[33mcommit 476d8f42bb50a3529e40b0545741847f26ca5654[m[33m ([m[1;31morigin/dev[m[33m, [m[1;32mdev[m[33m)[m
+Author: Manuelortegaj11 <manuelortegajuvinao@gmail.com>
+Date:   Sun Sep 24 22:28:33 2023 -0500
+
+    Finalizando diligenciar formulario
+
+[33mcommit bb363c89938288353295781c133f0a275e7560b5[m
+Author: Manuelortegaj11 <manuelortegajuvinao@gmail.com>
+Date:   Sun Sep 24 22:22:02 2023 -0500
+
+    Finalizando diligenciar formulario
+
+[33mcommit e2265052fc5a72492634d20efa10bfa6d2c35107[m
+Author: Manuelortegaj11 <manuelortegajuvinao@gmail.com>
+Date:   Sun Sep 24 21:47:36 2023 -0500
+
+    Finalizando diligenciar formulario
+
+[33mcommit f0fbd06b024ea856db00378c0cbefb7fee53a87f[m
+Author: Manuelortegaj11 <manuelortegajuvinao@gmail.com>
+Date:   Fri Sep 22 18:23:34 2023 -0500
+
+    Creating front-end base with responsive
+
+[33mcommit 807d44333d6ec6b81c8b9372fab4505f0eb779b8[m
+Author: Manuelortegaj11 <manuelortegajuvinao@gmail.com>
+Date:   Tue Sep 19 17:42:19 2023 -0500
+
+    Routes Creation
+
+[33mcommit 5ea716656d1f601f7ed45c69d6c75157f1df26dd[m[33m ([m[1;32mmain[m[33m)[m
+Author: Manuelortegaj11 <manuelortegajuvinao@gmail.com>
+Date:   Thu Sep 14 15:06:31 2023 -0500
+
+    Initial Laravel
+
+[33mcommit af2f9a5112097d71c8934236b5ab1bbd12a6f89b[m
+Author: Manuel Ortega <manuel@xhlar.com>
+Date:   Thu Sep 14 14:14:31 2023 -0500
+
+    Initial commit
