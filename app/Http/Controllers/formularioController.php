@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Estudiante;
+use App\Models\Formulario;
 use Illuminate\Http\Request;
 
 class formularioController extends Controller
@@ -19,7 +19,7 @@ class formularioController extends Controller
     public function store(Request $request)
     {
         $datosFormularioAG = $request->except('_token');
-        Estudiante::create($datosFormularioAG);
+        //Formulario::insert($datosFormularioAG);
         return response()->json($datosFormularioAG);
     }
     public function show()
