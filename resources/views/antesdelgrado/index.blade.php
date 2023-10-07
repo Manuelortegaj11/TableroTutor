@@ -90,7 +90,7 @@
             <div class="mb-4">
                <label class="block text-gray-700 text-sm font-bold mb-2" for="realizoSaberPro">¿Realizó las Saber Pro?</label>
                <select type="text" name="realizo_saber_pro" id="realizo_saber_pro" class="block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
-                  <option placeholder="">Seleccionar</option>
+                  <option value="NULL" >Seleccionar</option>
                   <option value="si">Sí</option>
                   <option value="no">No</option>
                </select>
@@ -126,14 +126,14 @@
             <h2 class="text-2xl font-bold mb-4">Inglés</h2>
             <label class="block text-gray-700 text-sm font-bold mb-1" for="ganado-ingles">¿Ganó el requisito de inglés?</label>
             <select id="ganador_requisito_ingles" name="ganador_requisito_ingles" class="pl-1 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"  onchange="mostrarOpciones()">
-               <option >Elegir</option>
+               <option value="NULL" >Elegir</option>
                <option value="si">Sí</option>
                <option value="no">No</option>
             </select>
             <div id="como_gano_requisito_ingles" style="display:none;">
                <label class="block text-gray-700 text-sm font-bold mb-1" for="como-ganado">¿Cómo lo ganó?</label>
                <select id="como_gano_requisito_ingles" name="como_gano_requisito_ingles" class="pl-1 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md" >
-                  <option placeholder="">Seleccionar</option>
+                  <option value="NULL">Seleccionar</option>
                   <option value="examen-ingles">Examen de inglés</option>
                   <option value="nivel-sena">Nivel del Sena</option>
                   <option value="curso-especial">Curso especial</option>
@@ -150,8 +150,8 @@
          <div id="tab4" class="tabcontent hidden">
             <div class="md:w-1/3 md:mr-4 mb-2">
                <label class="block text-gray-700 text-sm font-bold mb-1" for="opcion_grado">Opción de Grado:</label>
-               <select id="opcion_grado" name="observaciones_gano_requisito_ingles" class=" pl-1 py-1 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md w-full md:w-auto"  >
-                  <option placeholder="">Seleccionar</option>
+               <select id="opcion_grado" name="opcion_grado" class=" pl-1 py-1 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md w-full md:w-auto"  >
+                  <option value="NULL">Seleccionar</option>
                   <option value="practicas">Prácticas</option>
                   <option value="pasantia">Pasantía</option>
                   <option value="diplomado">Diplomado</option>
@@ -166,7 +166,7 @@
                   <div class="mb-4 md:mr-4 md:mb-0 w-full md:w-1/2">
                      <label class="block text-gray-700 text-sm font-bold mb-1" for="realizacion_prepracticas">Realización de preprácticas(si o no):</label>
                      <select id="realizacion_prepracticas" name="realizacion_prepracticas" class="mt-2 appearance-none border px-3 leading-tight  focus:shadow-outline block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
-                        <option placeholder="">Seleccionar</option>
+                        <option value="NULL">Seleccionar</option>
                         <option value="si">Sí</option>
                         <option value="no">No</option>
                      </select>
@@ -184,7 +184,7 @@
                   <div class="mb-8 md:mb-0 w-full md:w-1/2">
                      <label class="block text-gray-700 text-sm font-bold mb-1" for="remuneracion">Remuneración(si o no):</label>
                      <select id="remuneracion_pracpas" name="remuneracion_pracpas" class="mt-2 appearance-none border px-3 leading-tight  focus:shadow-outline block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
-                        <option placeholder="">Seleccionar</option>
+                        <option value="NULL">Seleccionar</option>
                         <option value="si">Sí</option>
                         <option value="no">No</option>
                      </select>
@@ -212,7 +212,7 @@
                   <div class="mb-4 md:mb-0 w-full md:w-1/2">
                      <label class="block text-gray-700 text-sm font-bold mb-1" for="">Legalización(si o no):</label>
                      <select id="legalizacion_pracpas" name="legalizacion_pracpas" class="mt-2 appearance-none border px-3 leading-tight  focus:shadow-outline block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
-                        <option placeholder="">Seleccionar</option>
+                        <option value="NULL">Seleccionar</option>
                         <option value="si">Sí</option>
                         <option value="no">No</option>
                      </select>
@@ -226,7 +226,7 @@
                   <div class="mb-4 md:mr-4 md:mb-0 w-full md:w-1/2">
                      <label class="block text-gray-700 text-sm font-bold mb-1" for="">Sustentación(si o no):</label>
                      <select id="sustento_pracpas" name="sustento_pracpas" class="mt-2 appearance-none border px-3 leading-tight  focus:shadow-outline block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
-                        <option placeholder="">Seleccionar</option>
+                        <option value="NULL">Seleccionar</option>
                         <option value="si">Sí</option>
                         <option value="no">No</option>
                      </select>
@@ -234,7 +234,7 @@
                   <div class="mb-4 md:mb-0 w-full md:w-1/2">
                      <label class="block text-gray-700 text-sm font-bold mb-1" for="">Aprobación plataforma(si o no):</label>
                      <select id="aprobacion_plataforma_pracpas" name="aprobacion_plataforma_pracpas" class="mt-2 appearance-none border px-3 leading-tight  focus:shadow-outline block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
-                        <option placeholder="">Seleccionar</option>
+                        <option value="NULL">Seleccionar</option>
                         <option value="si">Sí</option>
                         <option value="no">No</option>
                      </select>
@@ -267,7 +267,7 @@
                   <div class="mb-4 md:mb-0 w-full md:w-1/2">
                      <label class="block text-gray-700 text-sm font-bold mb-1" for="aprobacionplataform">Aprobación plataforma(si o no):</label>
                      <select id="aprobacion_plataforma_diplomado_proyecto" name="aprobacion_plataforma_diplomado_proyecto"   class="mt-2 appearance-none border px-3 leading-tight  focus:shadow-outline block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
-                        <option placeholder="">Seleccionar</option>
+                        <option value="NULL">Seleccionar</option>
                         <option value="si">Sí</option>
                         <option value="no">No</option>
                      </select>
@@ -281,7 +281,7 @@
                   <div class="w-full md:w-1/2">
                      <label class="block text-gray-700 text-sm font-bold mb-1" for="sustentacion">Sustentación(si o no):</label>
                      <select id="sustentacion_diplomado_proyecto" name="sustentacion_diplomado_proyecto" class="mt-2 appearance-none border px-3 leading-tight  focus:shadow-outline block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
-                        <option placeholder="">Seleccionar</option>
+                        <option value="NULL">Seleccionar</option>
                         <option value="si">Sí</option>
                         <option value="no">No</option>
                      </select>
