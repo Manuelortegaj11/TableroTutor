@@ -29,10 +29,10 @@ class CreateFormularioTable extends Migration
             $table->text('realizacion_prepracticas')->nullable();
             $table->string('empresa_pracpas')->nullable();
             $table->string('ciudad_pracpas')->nullable();
-            $table->decimal('remuneracion_pracpas', 10, 2)->nullable();
+            $table->string('remuneracion_pracpas')->nullable();
             $table->date('fecha_inicio_pracpas')->nullable();
             $table->date('fecha_final_pracpas')->nullable();
-            $table->integer('cantidad_remuneracion_pracpas')->nullable();
+            $table->string('cantidad_remuneracion_pracpas')->nullable();
             $table->string('tiempo_pracpas')->nullable();
             $table->text('legalizacion_pracpas')->nullable();
             $table->date('fecha_legalizacion_pracpas')->nullable();
@@ -42,10 +42,10 @@ class CreateFormularioTable extends Migration
             $table->date('fecha_final_diplomado_proyecto')->nullable();
             $table->string('tiempo_diplomado_proyecto')->nullable();
             $table->text('aprobacion_plataforma_diplomado_proyecto')->nullable();
-            $table->decimal('nota_diplomado_proyecto', 4, 2)->nullable();
-            $table->decimal('costo_diplomado_proyecto', 10, 2)->nullable();
+            $table->string('nota_diplomado_proyecto')->nullable();
+            $table->string('costo_diplomado_proyecto')->nullable();
             $table->text('sustentacion_diplomado_proyecto')->nullable();
-            $table->float('puntaje_saber_pro')->nullable();
+            $table->string('puntaje_saber_pro')->nullable();
             $table->string('puesto_saber_pro')->nullable();
             $table->string('requisito_grado')->nullable();
             $table->text('observaciones_requisito_grado')->nullable();

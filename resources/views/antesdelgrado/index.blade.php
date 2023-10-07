@@ -109,9 +109,9 @@
             <div class="mb-4" id="realizo_examen_suficiencia">
                <label class="block text-gray-700 text-sm font-bold mb-2">¿Realizó el examen de suficiencia?</label>
                <div class="flex items-center">
-                  <input type="radio" id="suficienciaSi" name="suficiencia" class="mr-2" value="si">
+                  <input type="radio" id="suficienciaSi" name="realizo_examen_suficiencia" class="mr-2" value="si">
                   <label for="suficienciaSi">Sí</label>
-                  <input type="radio" id="suficienciaNo" name="suficiencia" class="ml-4 mr-2" value="no">
+                  <input type="radio" id="suficienciaNo" name="realizo_examen_suficiencia" class="ml-4 mr-2" value="no">
                   <label for="suficienciaNo">No</label>
                </div>
             </div>
@@ -125,14 +125,14 @@
             <!-- Contenido para el tercer tab -->
             <h2 class="text-2xl font-bold mb-4">Inglés</h2>
             <label class="block text-gray-700 text-sm font-bold mb-1" for="ganado-ingles">¿Ganó el requisito de inglés?</label>
-            <select id="ganador_requisito_ingles" class="pl-1 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"  onchange="mostrarOpciones()">
+            <select id="ganador_requisito_ingles" name="ganador_requisito_ingles" class="pl-1 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"  onchange="mostrarOpciones()">
                <option >Elegir</option>
                <option value="si">Sí</option>
                <option value="no">No</option>
             </select>
             <div id="como_gano_requisito_ingles" style="display:none;">
                <label class="block text-gray-700 text-sm font-bold mb-1" for="como-ganado">¿Cómo lo ganó?</label>
-               <select id="como_gano_requisito_ingles" class="pl-1 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md" >
+               <select id="como_gano_requisito_ingles" name="como_gano_requisito_ingles" class="pl-1 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md" >
                   <option placeholder="">Seleccionar</option>
                   <option value="examen-ingles">Examen de inglés</option>
                   <option value="nivel-sena">Nivel del Sena</option>
@@ -144,13 +144,13 @@
             </div>
             <div id="observaciones_gano_requisito_ingles" style="display:none;">
                <label class="block text-gray-700 text-sm font-bold mb-2" for="observacion">Observaciones</label>
-               <textarea id="observaciones_gano_requisito_ingles" class="appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" rows="4" cols="50"></textarea>
+               <textarea id="observaciones_gano_requisito_ingles" name="observaciones_gano_requisito_ingles" class="appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" rows="4" cols="50"></textarea>
             </div>
          </div>
          <div id="tab4" class="tabcontent hidden">
             <div class="md:w-1/3 md:mr-4 mb-2">
                <label class="block text-gray-700 text-sm font-bold mb-1" for="opcion_grado">Opción de Grado:</label>
-               <select id="opcion_grado" class=" pl-1 py-1 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md w-full md:w-auto"  >
+               <select id="opcion_grado" name="observaciones_gano_requisito_ingles" class=" pl-1 py-1 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md w-full md:w-auto"  >
                   <option placeholder="">Seleccionar</option>
                   <option value="practicas">Prácticas</option>
                   <option value="pasantia">Pasantía</option>
@@ -165,7 +165,7 @@
                <div class="flex justify-center flex-col md:flex-row mb-4">
                   <div class="mb-4 md:mr-4 md:mb-0 w-full md:w-1/2">
                      <label class="block text-gray-700 text-sm font-bold mb-1" for="realizacion_prepracticas">Realización de preprácticas(si o no):</label>
-                     <select id="realizacion_prepracticas" class="mt-2 appearance-none border px-3 leading-tight  focus:shadow-outline block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
+                     <select id="realizacion_prepracticas" name="realizacion_prepracticas" class="mt-2 appearance-none border px-3 leading-tight  focus:shadow-outline block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
                         <option placeholder="">Seleccionar</option>
                         <option value="si">Sí</option>
                         <option value="no">No</option>
@@ -173,17 +173,17 @@
                   </div>
                   <div class="mb-8 md:mb-0 w-full md:w-1/2">
                      <label class="block text-gray-700 text-sm font-bold mb-1" for="empresa">Empresa:</label>
-                     <input id="empresa_pracpas"class="mt-1 appearance-none border rounded py-2 px-3 leading-tight focus:outline-none focus:shadow-outline w-full"  type="text">
+                     <input id="empresa_pracpas" name="empresa_pracpas" class="mt-1 appearance-none border rounded py-2 px-3 leading-tight focus:outline-none focus:shadow-outline w-full"  type="text">
                   </div>
                </div>
                <div class="flex justify-center flex-col md:flex-row mb-4">
                   <div class="mb-4 md:mr-4 md:mb-0 w-full md:w-1/2">
                      <label class="block text-gray-700 text-sm font-bold mb-1" for="ciudad">Ciudad:</label>
-                     <input id="ciudad_pracpas" class="mt-1 appearance-none border rounded py-2 px-3 leading-tight focus:outline-none focus:shadow-outline w-full"  type="text">
+                     <input id="ciudad_pracpas" name="ciudad_pracpas" class="mt-1 appearance-none border rounded py-2 px-3 leading-tight focus:outline-none focus:shadow-outline w-full"  type="text">
                   </div>
                   <div class="mb-8 md:mb-0 w-full md:w-1/2">
                      <label class="block text-gray-700 text-sm font-bold mb-1" for="remuneracion">Remuneración(si o no):</label>
-                     <select id="remuneracion_pracpas" class="mt-2 appearance-none border px-3 leading-tight  focus:shadow-outline block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
+                     <select id="remuneracion_pracpas" name="remuneracion_pracpas" class="mt-2 appearance-none border px-3 leading-tight  focus:shadow-outline block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
                         <option placeholder="">Seleccionar</option>
                         <option value="si">Sí</option>
                         <option value="no">No</option>
@@ -193,25 +193,25 @@
                <div class="flex justify-center flex-col md:flex-row mb-4">
                   <div class="mb-4 md:mr-4 md:mb-0 w-full md:w-1/2">
                      <label class="block text-gray-700 text-sm font-bold mb-1" for="fecha_inicio">Fecha inicio:</label>
-                     <input id="fecha_inicio_pracpas"class="mt-1 appearance-none border rounded py-2 px-3 leading-tight focus:outline-none focus:shadow-outline w-full"  type="date">
+                     <input id="fecha_inicio_pracpas" name="fecha_inicio_pracpas" class="mt-1 appearance-none border rounded py-2 px-3 leading-tight focus:outline-none focus:shadow-outline w-full"  type="date">
                   </div>
                   <div class="w-full md:w-1/2">
                      <label class="block text-gray-700 text-sm font-bold mb-1" for="fecha_final">Fecha final:</label>
-                     <input id="fecha_final_pracpas" class="mt-1 appearance-none border rounded py-2 px-3 leading-tight focus:outline-none focus:shadow-outline w-full"  type="date">
+                     <input id="fecha_final_pracpas" name="fecha_final_pracpas" class="mt-1 appearance-none border rounded py-2 px-3 leading-tight focus:outline-none focus:shadow-outline w-full"  type="date">
                   </div>
                </div>
                <div class="flex justify-center flex-col md:flex-row mb-4">
                   <div class="mb-4 md:mr-4 md:mb-0 w-full md:w-1/2">
                      <label class="block text-gray-700 text-sm font-bold mb-1" for="">Remuneración:</label>
-                     <input id="cantidad_remuneracion_pracpas" class="mt-1 appearance-none border rounded py-2 px-3 leading-tight focus:outline-none focus:shadow-outline w-full"  type="text">
+                     <input id="cantidad_remuneracion_pracpas" name="cantidad_remuneracion_pracpas" class="mt-1 appearance-none border rounded py-2 px-3 leading-tight focus:outline-none focus:shadow-outline w-full"  type="text">
                   </div>
                   <div class="mb-4 md:mr-4 md:mb-0 w-full md:w-1/2">
                      <label class="block text-gray-700 text-sm font-bold mb-1" for="">Meses:</label>
-                     <input id="tiempo_pracpas" class="mt-1 appearance-none border rounded py-2 px-3 leading-tight focus:outline-none focus:shadow-outline w-full"  type="text" >
+                     <input id="tiempo_pracpas" name="tiempo_pracpas" class="mt-1 appearance-none border rounded py-2 px-3 leading-tight focus:outline-none focus:shadow-outline w-full"  type="text" >
                   </div>
                   <div class="mb-4 md:mb-0 w-full md:w-1/2">
                      <label class="block text-gray-700 text-sm font-bold mb-1" for="">Legalización(si o no):</label>
-                     <select id="Legalizacion_pracpas" class="mt-2 appearance-none border px-3 leading-tight  focus:shadow-outline block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
+                     <select id="legalizacion_pracpas" name="legalizacion_pracpas" class="mt-2 appearance-none border px-3 leading-tight  focus:shadow-outline block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
                         <option placeholder="">Seleccionar</option>
                         <option value="si">Sí</option>
                         <option value="no">No</option>
@@ -221,11 +221,11 @@
                <div class="flex justify-center flex-col md:flex-row mb-4">
                   <div class="mb-4 md:mr-4 md:mb-0 w-full md:w-1/2">
                      <label class="block text-gray-700 text-sm font-bold mb-1" for="">Fecha legalización:</label>
-                     <input id="fecha_legalizacion_pracpas" type="date" class="mt-1 appearance-none border rounded py-2 px-3 leading-tight focus:outline-none focus:shadow-outline w-full"  type="text" >
+                     <input id="fecha_legalizacion_pracpas" name="fecha_legalizacion_pracpas" type="date" class="mt-1 appearance-none border rounded py-2 px-3 leading-tight focus:outline-none focus:shadow-outline w-full"  type="text" >
                   </div>
                   <div class="mb-4 md:mr-4 md:mb-0 w-full md:w-1/2">
                      <label class="block text-gray-700 text-sm font-bold mb-1" for="">Sustentación(si o no):</label>
-                     <select id="sustento_pracpas" class="mt-2 appearance-none border px-3 leading-tight  focus:shadow-outline block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
+                     <select id="sustento_pracpas" name="sustento_pracpas" class="mt-2 appearance-none border px-3 leading-tight  focus:shadow-outline block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
                         <option placeholder="">Seleccionar</option>
                         <option value="si">Sí</option>
                         <option value="no">No</option>
@@ -233,7 +233,7 @@
                     </div>
                   <div class="mb-4 md:mb-0 w-full md:w-1/2">
                      <label class="block text-gray-700 text-sm font-bold mb-1" for="">Aprobación plataforma(si o no):</label>
-                     <select id="aprobacion_plataforma_pracpas" class="mt-2 appearance-none border px-3 leading-tight  focus:shadow-outline block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
+                     <select id="aprobacion_plataforma_pracpas" name="aprobacion_plataforma_pracpas" class="mt-2 appearance-none border px-3 leading-tight  focus:shadow-outline block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
                         <option placeholder="">Seleccionar</option>
                         <option value="si">Sí</option>
                         <option value="no">No</option>
@@ -247,26 +247,26 @@
                <!-- Grupo 1 -->
                <div class="flex justify-center flex-col md:flex-row mb-4">
                   <div class="mb-4 md:mr-4 md:mb-0 w-full md:w-1/2">
-                     <label class="block text-gray-700 text-sm font-bold mb-1" for="Fecha_inicial2">Fecha inicial:</label>
-                     <input id="fecha_inicial_diplomado_proyecto" class="mt-1 appearance-none border rounded py-2 px-3 leading-tight focus:outline-none focus:shadow-outline w-full" type="date" >
+                     <label class="block text-gray-700 text-sm font-bold mb-1" for="">Fecha inicial:</label>
+                     <input id="fecha_inicial_diplomado_proyecto" name="fecha_inicio_diplomado_proyecto" class="mt-1 appearance-none border rounded py-2 px-3 leading-tight focus:outline-none focus:shadow-outline w-full" type="date" >
                   </div>
                   <div class="mb-8 md:mb-0 w-full md:w-1/2">
-                     <label class="block text-gray-700 text-sm font-bold mb-1" for="Fecha_final2">Fecha final:</label>
-                     <input id="fecha_final_diplomado_proyecto" class="mt-1 appearance-none border rounded py-2 px-3 leading-tight focus:outline-none focus:shadow-outline w-full"  type="date">
+                     <label class="block text-gray-700 text-sm font-bold mb-1" for="">Fecha final:</label>
+                     <input id="fecha_final_diplomado_proyecto" name="fecha_final_diplomado_proyecto" class="mt-1 appearance-none border rounded py-2 px-3 leading-tight focus:outline-none focus:shadow-outline w-full"  type="date">
                   </div>
                </div>
                <div class="flex justify-center flex-col md:flex-row mb-4">
                   <div class="mb-4 md:mr-4 md:mb-0 w-full md:w-1/2">
                      <label class="block text-gray-700 text-sm font-bold mb-1" for="tiempo">Tiempo de duración:</label>
-                     <input id="tiempo_diplomado_proyecto" class="mt-1 appearance-none border rounded py-2 px-3 leading-tight focus:outline-none focus:shadow-outline w-full"  type="text" >
+                     <input id="tiempo_diplomado_proyecto" name="tiempo_diplomado_proyecto" class="mt-1 appearance-none border rounded py-2 px-3 leading-tight focus:outline-none focus:shadow-outline w-full"  type="text" >
                   </div>
                   <div class="mb-4 md:mr-4 md:mb-0 w-full md:w-1/2">
                      <label class="block text-gray-700 text-sm font-bold mb-1" for="nota">Nota:</label>
-                     <input id="nota_diplomado_proyecto" class="mt-1 appearance-none border rounded py-2 px-3 leading-tight focus:outline-none focus:shadow-outline w-full"  type="text">
+                     <input id="nota_diplomado_proyecto" name="nota_diplomado_proyecto" class="mt-1 appearance-none border rounded py-2 px-3 leading-tight focus:outline-none focus:shadow-outline w-full"  type="text">
                   </div>
                   <div class="mb-4 md:mb-0 w-full md:w-1/2">
                      <label class="block text-gray-700 text-sm font-bold mb-1" for="aprobacionplataform">Aprobación plataforma(si o no):</label>
-                     <select id="aprobacion_plataforma_diplomado_proyecto" class="mt-2 appearance-none border px-3 leading-tight  focus:shadow-outline block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
+                     <select id="aprobacion_plataforma_diplomado_proyecto" name="aprobacion_plataforma_diplomado_proyecto"   class="mt-2 appearance-none border px-3 leading-tight  focus:shadow-outline block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
                         <option placeholder="">Seleccionar</option>
                         <option value="si">Sí</option>
                         <option value="no">No</option>
@@ -276,11 +276,11 @@
                <div class="flex justify-center flex-col md:flex-row mb-4">
                   <div class="mb-4 md:mr-4 md:mb-0 w-full md:w-1/2">
                      <label class="block text-gray-700 text-sm font-bold mb-1" for="costo">Costo</label>
-                     <input id="costo_diplomado_proyecto"  class="mt-1 appearance-none border rounded py-2 px-3 leading-tight focus:outline-none focus:shadow-outline w-full"  type="text" >
+                     <input id="costo_diplomado_proyecto" name="costo_diplomado_proyecto"  class="mt-1 appearance-none border rounded py-2 px-3 leading-tight focus:outline-none focus:shadow-outline w-full"  type="text" >
                   </div>
                   <div class="w-full md:w-1/2">
                      <label class="block text-gray-700 text-sm font-bold mb-1" for="sustentacion">Sustentación(si o no):</label>
-                     <select id="sustentacion_diplomado_proyecto" class="mt-2 appearance-none border px-3 leading-tight  focus:shadow-outline block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
+                     <select id="sustentacion_diplomado_proyecto" name="sustentacion_diplomado_proyecto" class="mt-2 appearance-none border px-3 leading-tight  focus:shadow-outline block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
                         <option placeholder="">Seleccionar</option>
                         <option value="si">Sí</option>
                         <option value="no">No</option>
@@ -290,7 +290,7 @@
             </div>
             <div id="campos_exoneracion" style="display: none;">
                <label class="block text-gray-700 text-sm font-bold mb-1" for="nota_saber_pro">Nota obtenida en Saber Pro:</label>
-               <input id="puntaje_saber_pro" type="text" name="nota_saber_pro" class="appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline">
+               <input id="puntaje_saber_pro" type="text" name="puntaje_saber_pro" class="appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline">
                <label class="block text-gray-700 text-sm font-bold mb-1" for="puesto_saber_pro">Puesto ocupado:</label>
                <input id="puesto_saber_pro" type="text" name="puesto_saber_pro" class="appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline">
             </div>
@@ -307,23 +307,23 @@
             </div>
             <div class="mb-4" id="observacionesDiv" style="display:block;">
                <label for="observaciones" class="block text-gray-700 text-sm font-bold mb-1">Observaciones</label>
-               <textarea id="observaciones_requisito_grado" class="appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" rows="3" placeholder="Añade observaciones..."></textarea>
+               <textarea id="observaciones_requisito_grado" name="observaciones_requisito_grado" class="appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" rows="3" placeholder="Añade observaciones..."></textarea>
             </div>
             <div class="mb-4">
                <label for="finalizacion" class="block text-gray-700 text-sm font-bold mb-1">Fecha de finalización académica</label>
-               <input id="periodo_finalizacion_academica" type="text" class="appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" placeholder="Ejemplo: 20241">
+               <input id="periodo_finalizacion_academica" name="periodo_finalizacion_academica" type="text" class="appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" placeholder="Ejemplo: 20241">
             </div>
             <div class="mb-4">
                <label for="fechaGrado" class="block text-gray-700 text-sm font-bold mb-1">Fecha prevista de grado</label>
-               <input id="fecha_prevista_grado" type="date" class="appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline">
+               <input id="fecha_prevista_grado" name="fecha_prevista_grado" type="date" class="appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline">
             </div>
             <div class="mb-4">
                <label for="nivel" class="block text-gray-700 text-sm font-bold mb-1">Nivel del estudiante (1 al 5)</label>
-               <input id="nivel_estudiante" type="range" class="form-range mt-1 block w-full" min="1" max="5">
+               <input id="nivel_estudiante" name="nivel_estudiante" type="range" class="form-range mt-1 block w-full" min="1" max="5">
             </div>
             <div class="mb-4">
                <label for="observacionesGenerales" class="block text-gray-700 text-sm font-bold mb-1">Observaciones generales</label>
-               <textarea id="observaciones_generales" class="appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" rows="3" placeholder="Añade observaciones..."></textarea>
+               <textarea id="observaciones_generales" name="observaciones_generales" class="appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" rows="3" placeholder="Añade observaciones..."></textarea>
             </div>
          </div>
          <div id="botonesEnvio" class="flex justify-center space-x-2">
