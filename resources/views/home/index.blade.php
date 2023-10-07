@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha384-oC1lgQxV0LL5qqTn6eNP6uUZCS9ck8okgMOF1qLGm1oZ+2mBAQQ7Tkj5KJo5qtHT" crossorigin="anonymous">
     @vite('resources/css/app.css')
 <style>
         #menu-icon.active {
