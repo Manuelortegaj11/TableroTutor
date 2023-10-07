@@ -17,10 +17,11 @@ class formularioController extends Controller
     }
 
     public function store(Request $request){
-        $datosFormularioAG = $request->except('_token');
+        $formulario = $request->except('_token');
 
         // Crea una instancia del modelo Formulario con los datos del formulario
     // Completa la instancia del modelo Formulario con los datos del formulario
+
     $formulario = new Formulario([
         'fecha_realizacion' => $request->input('fecha_realizacion'),
         'nombre_completo' => $request->input('nombre_completo'),
@@ -39,29 +40,28 @@ class formularioController extends Controller
         'observaciones_gano_requisito_ingles' => $request->input('observaciones_gano_requisito_ingles'),
         'opcion_grado' => $request->input('opcion_grado'),
         'realizacion_prepracticas' => $request->input('realizacion_prepracticas'),
-        'empresa_prepracticas' => $request->input('empresa_prepracticas'),
-        'ciudad_prepracticas' => $request->input('ciudad_prepracticas'),
-        'fecha_inicio_prepracticas' => $request->input('fecha_inicio_prepracticas'),
-        'fecha_final_prepracticas' => $request->input('fecha_final_prepracticas'),
-        'remuneracion_prepracticas' => $request->input('remuneracion_prepracticas'),
-        'tiempo_prepracticas' => $request->input('tiempo_prepracticas'),
-        'legalizacion_prepracticas' => $request->input('legalizacion_prepracticas'),
-        'fecha_legalizacion_prepracticas' => $request->input('fecha_legalizacion_prepracticas'),
-        'sustento_prepracticas' => $request->input('sustento_prepracticas'),
-        'aprobacion_plataforma_prepracticas' => $request->input('aprobacion_plataforma_prepracticas'),
-        'fecha_aprobacion_plataforma_prepracticas' => $request->input('fecha_aprobacion_plataforma_prepracticas'),
+        'empresa_pracpas' => $request->input('empresa_pracpas'),
+        'ciudad_pracpas' => $request->input('ciudad_pracpas'),
+        'remuneracion_pracpas' => $request->input('remuneracion_pracpas'),
+        'fecha_inicio_pracpas' => $request->input('fecha_inicio_pracpas'),
+        'fecha_final_pracpas' => $request->input('fecha_final_pracpas'),
+        'cantidad_remuneracion_pracpas' => $request->input('cantidad_remuneracion_pracpas'),
+        'tiempo_pracpas' => $request->input('tiempo_pracpas'),
+        'legalizacion_pracpas' => $request->input('legalizacion_pracpas'),
+        'fecha_legalizacion_pracpas' => $request->input('fecha_legalizacion_pracpas'),
+        'sustento_pracpas' => $request->input('sustento_pracpas'),
+        'aprobacion_plataforma_pracpas' => $request->input('aprobacion_plataforma_pracpas'),
         'fecha_inicial_diplomado_proyecto' => $request->input('fecha_inicial_diplomado_proyecto'),
         'fecha_final_diplomado_proyecto' => $request->input('fecha_final_diplomado_proyecto'),
         'tiempo_diplomado_proyecto' => $request->input('tiempo_diplomado_proyecto'),
-        'aprobacion_plataforma_diplomado_proyecto' => $request->input('aprobacion_plataforma_diplomado_proyecto'),
         'nota_diplomado_proyecto' => $request->input('nota_diplomado_proyecto'),
+        'aprobacion_plataforma_diplomado_proyecto' => $request->input('aprobacion_plataforma_diplomado_proyecto'),
         'costo_diplomado_proyecto' => $request->input('costo_diplomado_proyecto'),
         'sustentacion_diplomado_proyecto' => $request->input('sustentacion_diplomado_proyecto'),
-        'exoneracion_resultados_saber_pro' => $request->input('exoneracion_resultados_saber_pro'),
         'puntaje_saber_pro' => $request->input('puntaje_saber_pro'),
         'puesto_saber_pro' => $request->input('puesto_saber_pro'),
-        'ganador_requisito_grado' => $request->input('ganador_requisito_grado'),
-        'observaciones_ganador_requisito_grado' => $request->input('observaciones_ganador_requisito_grado'),
+        'requisito_grado' => $request->input('requisito_grado'),
+        'observaciones_requisito_grado' => $request->input('observaciones_requisito_grado'),
         'periodo_finalizacion_academica' => $request->input('periodo_finalizacion_academica'),
         'fecha_prevista_grado' => $request->input('fecha_prevista_grado'),
         'nivel_estudiante' => $request->input('nivel_estudiante'),
@@ -72,7 +72,7 @@ class formularioController extends Controller
     $formulario->save();
 
     // Puedes redirigir al usuario a una página de éxito o realizar otra acción aquí
-    return redirect('/formulario')->with('success', 'Los datos se han guardado correctamente');
+    return redirect('/formularios')->with('success', 'Los datos se han guardado correctamente');
     // return response()->json($datosFormularioAG);
 }
 
