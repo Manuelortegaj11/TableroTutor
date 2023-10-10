@@ -11,7 +11,7 @@ class proximosGraduadosController extends Controller
 {
     public function index()
     {
-        $datos['formularios']=Formulario::paginate(2);
+        $datos['formularios']=Formulario::paginate(10);
         return view('proximosgraduados.index', $datos);
     }
 

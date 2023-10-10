@@ -24,7 +24,7 @@
                   <input type="text" name="nombre_completo" value="{{ isset($formulario->nombre_completo)?$formulario->nombre_completo:old("nombre_completo") }}" id="nombre_completo" class="appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline">
                </div>
                <div class="mb-2">
-                  <label class="block text-gray-700 text-sm font-bold mb-1" for="codigo">Código estudiantil:</label>
+                  <label class="block text-gray-700 text-sm font-bo{{ isset($formulario->programa_cursado)?$formulario->programa_cursado:old("programa_cursado") }}ld mb-1" for="codigo">Código estudiantil:</label>
                   <input type="text" name="codigo_estudiantil" value="{{ isset($formulario->codigo_estudiantil)?$formulario->codigo_estudiantil:old("codigo_estudiantil") }}"  id="codigo_estudiantil"  class="appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline">
                </div>
                <div class="mb-2">
