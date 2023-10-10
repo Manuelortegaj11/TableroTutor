@@ -24,4 +24,4 @@ Route::get('/',[homeController::class, 'index'])->name('home');
 Route::resource('formularios',formularioController::class);
 Route::resource('antesgrado',antesGradoController::class);
 Route::resource('listado-proximo-graduado',proximosGraduadosController::class);
-Route::resource('/lista-egresados',egresadosController::class);
+Route::resource('lista-egresados',egresadosController::class);
