@@ -22,14 +22,14 @@
             </thead>
             <tbody>
                <!-- Aquí puedes iterar sobre tus datos desde Laravel y mostrarlos en la tabla -->
-
+                @foreach( $formularios as $formulario )
                <tr>
-                  <td class="py-2 px-4 border-b">Nombre del Graduado</td>
-                  <td class="py-2 px-4 border-b">Código del Graduado</td>
-                  <td class="py-2 px-4 border-b">Teléfono del Graduado</td>
-                  <td class="py-2 px-4 border-b">Nivel del Graduado</td>
+                  <td class="py-2 px-4 border-b">{{$formulario->nombre_completo}}</td>
+                  <td class="py-2 px-4 border-b">{{$formulario->codigo_estudiantil}}</td>
+                  <td class="py-2 px-4 border-b">{{$formulario->telefono}}</td>
+                  <td class="py-2 px-4 border-b">{{$formulario->nivel_estudiante}}</td>
                   <td class="py-2 px-4 border-b text-center">
-                     <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded-full mr-1">
+                     <button href="{{ url('/formularios/'.$formulario->id) }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded-full mr-1">
                         <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
                            <g fill="#2e3436">
                               <path d="M3 14h13v1H3z"/>
@@ -37,7 +37,7 @@
                            </g>
                         </svg>
                      </button>
-                     <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 rounded-full mr-1">
+                     <button  class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 rounded-full mr-1">
                         <svg xmlns:cc='http://creativecommons.org/ns#' xmlns:dc='http://purl.org/dc/elements/1.1/' sodipodi:docname='edit-delete.svg' inkscape:export-filename='/home/sam/source-symbolic.png' inkscape:export-xdpi='270' inkscape:export-ydpi='270' height='16' id='svg7384' xmlns:inkscape='http://www.inkscape.org/namespaces/inkscape' xmlns:osb='http://www.openswatchbook.org/uri/2009/osb' xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' xmlns:sodipodi='http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd' style='enable-background:new' xmlns:svg='http://www.w3.org/2000/svg' version='1.1' inkscape:version='0.91 r' width='16' xmlns='http://www.w3.org/2000/svg'>
                            <sodipodi:namedview inkscape:bbox-nodes='true' inkscape:bbox-paths='false' bordercolor='#666666' borderlayer='false' borderopacity='1' inkscape:current-layer='layer12' inkscape:cx='157.8645' inkscape:cy='-158.04959' gridtolerance='10' inkscape:guide-bbox='true' guidetolerance='10' id='namedview88' inkscape:object-nodes='true' inkscape:object-paths='true' objecttolerance='10' pagecolor='#f7f7f7' inkscape:pageopacity='0' inkscape:pageshadow='2' showborder='true' showgrid='false' showguides='true' inkscape:showpageshadow='false' inkscape:snap-bbox='true' inkscape:snap-bbox-edge-midpoints='false' inkscape:snap-bbox-midpoints='true' inkscape:snap-center='false' inkscape:snap-global='true' inkscape:snap-grids='true' inkscape:snap-intersection-paths='true' inkscape:snap-midpoints='true' inkscape:snap-nodes='true' inkscape:snap-object-midpoints='true' inkscape:snap-others='true' inkscape:snap-page='false' inkscape:snap-smooth-nodes='true' inkscape:snap-to-guides='true' inkscape:window-height='706' inkscape:window-maximized='1' inkscape:window-width='1366' inkscape:window-x='0' inkscape:window-y='32' inkscape:zoom='1'>
                               <inkscape:grid color='#000000' dotted='false' empcolor='#0800ff' empopacity='0.4627451' empspacing='4' enabled='true' id='grid4866' opacity='0.16470588' originx='-144.00023' originy='-295.99636' snapvisiblegridlinesonly='true' spacingx='0.25px' spacingy='0.25px' type='xygrid' visible='true'/>
@@ -107,6 +107,7 @@
                      </button>
                   </td>
                </tr>
+                @endforeach
                <!-- Agrega más filas con datos adicionales -->
             </tbody>
          </table>
