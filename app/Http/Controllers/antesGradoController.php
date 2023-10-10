@@ -8,11 +8,17 @@ class antesGradoController extends Controller
 {
     public function index()
     {
-    return view('antesdelgrado.index');
+        return view('antesdelgrado.index');
     }
+
+    public function edit($id){
+        $formulario = Formulario::find($id);
+        return view('antesdelgrado.edit', compact('formulario'));
+    }
+
     public function create()
     {
-    return view('antesdelgrado.create');
+        return view('antesdelgrado.create');
     }
     public function store(Request $request){
         $formulario = $request->except('_token');
