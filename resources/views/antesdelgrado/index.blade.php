@@ -27,15 +27,48 @@
                   <label class="block text-gray-700 text-sm font-bold mb-1" for="codigo">Código estudiantil:</label>
                   <input type="text" name="codigo_estudiantil" value="{{ isset($formulario->codigo_estudiantil)?$formulario->codigo_estudiantil:old("codigo_estudiantil") }}"  id="codigo_estudiantil"  class="appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline">
                </div>
-<div class="mb-2">
-    <label class="block text-gray-700 text-sm font-bold mb-1" for="programa">Programa cursado:</label>
-    <select name="programa_cursado" id="programa_cursado" class="block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
-        <option value="">Selecciona una carrera</option>
-        @foreach($programas as $programa)
-            <option value="{{ $formulario->$programa }}" {{ $formulario->programa_cursado == $programa ? 'selected' : '' }}>{{ $programa }}</option>
-        @endforeach
-    </select>
-</div>
+               <div class="mb-2">
+                  <label class="block text-gray-700 text-sm font-bold mb-1" for="programa">Programa cursado:</label>
+                  <select name="programa_cursado" value="" id="programa_cursado" class="block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
+                     <option value="">Selecciona una carrera</option>
+                     <option value="admin_empresas">Administración de Empresas</option>
+                     <option value="admin_empresas_turisticas">Administración de Empresas Turísticas y Hoteleras</option>
+                     <option value="antropologia">Antropología</option>
+                     <option value="biologia">Biología</option>
+                     <option value="cine_audiovisuales">Cine y Audiovisuales</option>
+                     <option value="contaduria_publica">Contaduría Pública</option>
+                     <option value="Derecho">Derecho</option>
+                     <option value="economia">Economía</option>
+                     <option value="enfermeria">Enfermería</option>
+                     <option value="ciencias_salud">Facultad de Ciencias de la Salud</option>
+                     <option value="gestion_cultural">Gestión Cultural y de Industrias Creativas</option>
+                     <option value="historia_patrimonio">Historia y Patrimonio</option>
+                     <option value="ingenieria_agronomica">Ingeniería Agronómica</option>
+                     <option value="ingenieria_ambiental_sanitaria">Ingeniería Ambiental y Sanitaria</option>
+                     <option value="ingenieria_civil">Ingeniería Civil</option>
+                     <option value="ingenieria_electronica">Ingeniería Electrónica</option>
+                     <option value="ingenieria_industrial">Ingeniería Industrial</option>
+                     <option value="ingenieria_marino_costera">Ingeniería Marino-Costera</option>
+                     <option value="ingenieria_pesquera">Ingeniería Pesquera</option>
+                     <option value="ingenieria_sistemas">Ingeniería de Sistemas</option>
+                     <option value="licenciatura_artes">Licenciatura en Artes</option>
+                     <option value="licenciatura_ciencias_naturales_ambiental">Licenciatura en Ciencias Naturales y Educación Ambiental</option>
+                     <option value="licenciatura_educacion_campesina_rural">Licenciatura en Educación Campesina y Rural</option>
+                     <option value="licenciatura_educacion_infantil">Licenciatura en Educación Infantil</option>
+                     <option value="licenciatura_etnoeducacion">Licenciatura en Etnoeducación</option>
+                     <option value="licenciatura_informatica">Licenciatura en Informática</option>
+                     <option value="licenciatura_lenguas_extranjeras_ingles">Licenciatura en Lenguas Extranjeras con Énfasis en Inglés</option>
+                     <option value="licenciatura_literatura_lengua_castellana">Licenciatura en Literatura y Lengua Castellana</option>
+                     <option value="licenciatura_matematicas">Licenciatura en Matemáticas</option>
+                     <option value="licenciatura_quimica">Licenciatura en Química</option>
+                     <option value="licenciatura_tecnologia">Licenciatura en Tecnología</option>
+                     <option value="medicina">Medicina</option>
+                     <option value="negocios_internacionales">Negocios Internacionales</option>
+                     <option value="odontologia">Odontología</option>
+                     <option value="psicologia">Psicología</option>
+                     <option value="tecnologia_gestion_hotelera_turistica">Tecnología en Gestión Hotelera y Turística</option>
+                  </select>
+               </div>
                <div class="mb-2">
                   <label class="block text-gray-700 text-sm font-bold mb-1" for="telefono">Teléfono:</label>
                   <input type="text" name="telefono" value="{{ isset($formulario->telefono)?$formulario->telefono:old("telefono") }}"  id="telefono" class="appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline">
