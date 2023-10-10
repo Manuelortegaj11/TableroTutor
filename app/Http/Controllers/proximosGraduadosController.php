@@ -17,6 +17,6 @@ class proximosGraduadosController extends Controller
     {
         $formulario = Formulario::findOrFail($id);
         return view('proximosgraduados.edit',compact('formulario'));
-
     }
+
 }
