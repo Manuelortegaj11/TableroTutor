@@ -29,7 +29,7 @@
                   <td class="py-2 px-4 border-b">{{$formulario->telefono}}</td>
                   <td class="py-2 px-4 border-b">{{$formulario->nivel_estudiante}}</td>
                   <td class="py-2 px-4 border-b text-center">
-                     <a href="{{ url('/listado-proximo-graduado/'.$formulario->id) }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded-full mr-1">
+                     <a href="{{ url('/listado-proximo-graduado/'.$formulario->id).'/edit' }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded-full mr-1">
                         <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
                            <g fill="#2e3436">
                               <path d="M3 14h13v1H3z"/>
