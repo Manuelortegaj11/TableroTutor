@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+
 use App\Models\Formulario;
 use Illuminate\Http\Request;
 
@@ -13,6 +14,7 @@ class formularioController extends Controller
     }
     public function create()
     {
+
     return view('formulario.create');
     }
 
@@ -67,6 +69,7 @@ class formularioController extends Controller
         'nivel_estudiante' => $request->input('nivel_estudiante'),
         'observaciones_generales' => $request->input('observaciones_generales'),
     ]);
+
 
     // Guarda el registro en la base de datos
     $formulario->save();
