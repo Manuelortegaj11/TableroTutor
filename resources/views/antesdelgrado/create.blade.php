@@ -7,7 +7,7 @@
 @csrf
 
 
-@include('antesdelgrado.index')
+@include('antesdelgrado.index',['modo'=>'Enviar'])
 
 
 </form>

@@ -327,7 +327,7 @@
             </div>
          </div>
          <div id="botonesEnvio" class="flex justify-center space-x-2">
-            <input type="submit" class=" bg-unimagBlue hover:bg-green-500 text-white font-bold py-2 px-2 rounded-lg border-r border-white" value="Enviar datos"></input>
+            <input type="submit" class=" bg-unimagBlue hover:bg-green-500 text-white font-bold py-2 px-2 rounded-lg border-r border-white" value="{{$modo}} datos"></input>
          </div>
       </div>
    </div>
