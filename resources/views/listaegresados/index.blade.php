@@ -2,7 +2,9 @@
 
 @section('content')
 
-Soy lista egresados
+<section class="gradient-form h-full bg-neutral-200 dark:bg-neutral-200 min-h-screen flex items-center justify-center">
+I'm Egresados
+</section>
 
 @endsection
 
