@@ -10,20 +10,12 @@ class formularioController extends Controller
 {
     public function index()
     {
-    return view('formulario.index');
+    return view('formularios.index');
     }
-    public function create()
-    {
-
-    return view('formulario.create');
-    }
-
     public function store(Request $request){
         $formulario = $request->except('_token');
-
-        // Crea una instancia del modelo Formulario con los datos del formulario
+    // Crea una instancia del modelo Formulario con los datos del formulario
     // Completa la instancia del modelo Formulario con los datos del formulario
-
     $formulario = new Formulario([
         'fecha_realizacion' => $request->input('fecha_realizacion'),
         'nombre_completo' => $request->input('nombre_completo'),
@@ -69,8 +61,6 @@ class formularioController extends Controller
         'nivel_estudiante' => $request->input('nivel_estudiante'),
         'observaciones_generales' => $request->input('observaciones_generales'),
     ]);
-
-
     // Guarda el registro en la base de datos
     $formulario->save();
 
@@ -79,16 +69,4 @@ class formularioController extends Controller
     // return response()->json($datosFormularioAG);
 }
 
-    public function show()
-    {
-    }
-    public function edit()
-    {
-    }
-    public function update()
-    {
-    }
-    public function destroy()
-    {
-    }
 }

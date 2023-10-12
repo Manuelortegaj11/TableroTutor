@@ -349,7 +349,7 @@
          </div>
          <div class="mb-4">
             <label for="nivel" class="block text-gray-700 text-sm font-bold mb-1">Nivel del estudiante (1 al 5)</label>
-            <input id="nivel_estudiante" value="{{ isset($formulario->nivel_estudiante)?$formulario->nivel_estudiante:old("nivel_estudiante") }}"{{ isset($readonly) && $readonly ? 'readonly' : '' }} name="nivel_estudiante" type="range" class="form-range mt-1 block w-full" min="1" max="5">
+            <input id="nivel_estudiante" value="{{ isset($formulario->nivel_estudiante)?$formulario->nivel_estudiante:old("nivel_estudiante") }}"{{ isset($readonly) && $readonly ? 'disabled' : '' }} name="nivel_estudiante" type="range" class="form-range mt-1 block w-full" min="1" max="5">
          </div>
          <div class="mb-4">
             <label for="observacionesGenerales" class="block text-gray-700 text-sm font-bold mb-1">Observaciones generales</label>
