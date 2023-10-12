@@ -1,8 +1,5 @@
 @extends('home.layout')
 
-
-
-
 @section('content')
 <style>
   .fixed-navbar {

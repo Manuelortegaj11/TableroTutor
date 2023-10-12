@@ -75,7 +75,7 @@ class formularioController extends Controller
     $formulario->save();
 
     // Puedes redirigir al usuario a una página de éxito o realizar otra acción aquí
-    return redirect('/listado-proximo-graduado')->with('success', 'Los datos se han guardado correctamente');
+    return redirect('/listado-proximo-graduado')->with('mensaje','Formulario Antes del grado Creado correctamente ☑');
     // return response()->json($datosFormularioAG);
 }
 

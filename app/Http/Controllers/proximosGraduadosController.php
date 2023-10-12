@@ -14,7 +14,15 @@ class proximosGraduadosController extends Controller
         $datos['formularios']=Formulario::paginate(3);
         return view('proximosgraduados.index', $datos);
     }
+    public function show($id)
+    {
+        $formulario = Formulario::findOrFail($id);
 
+
+return view('proximosgraduados.show', compact('formulario'))
+    ->with('mensaje', 'Terminaste revisión👀');
+
+    }
     public function edit($id)
     {
         $formulario = Formulario::findOrFail($id);
@@ -26,14 +34,14 @@ class proximosGraduadosController extends Controller
         $formulario = Formulario::findOrFail($id);
         $datosFormulario = request()->except(['_token', '_method']);
         $formulario->update($datosFormulario);
-        return redirect('listado-proximo-graduado')->with('mensaje','Formulario Antes del grado modificado 📝');
+        return redirect('listado-proximo-graduado')->with('mensaje','Formulario Antes del grado modificado 🖍');
     }
 
 public function destroy($id)
     {
         $formulario = Formulario::findOrFail($id);
         $formulario->delete();
-        return redirect('listado-proximo-graduado')->with('mensaje', 'Formulario eliminado correctamente');
+        return redirect('listado-proximo-graduado')->with('mensaje', 'Formulario eliminado correctamente ☒');
     }
 }
 

@@ -1,6 +1,16 @@
 @extends('home.layout')
 @section('content')
 
+@if(Session::has('mensaje'))
+    <div x-data="{ open: true }" x-show="open" class="bg-unimagOrange text-white shadow-md">
+        <strong>{{ Session::get('mensaje') }}</strong>
+        <button @click="open = false" class="text-white ml-4">
+            &times;
+        </button>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+@endif
+
 <style>
     .button-link {
         display: inline-block;
@@ -17,7 +27,7 @@
 <section class="gradient-form h-full bg-neutral-200 dark:bg-neutral-200 min-h-screen">
    <div class="container mx-auto p-4">
       <h1 class="text-2xl font-bold mb-4">Listado de Próximos Graduados</h1>
-<div class="text-right mr-4">
+<div class="flex justify-center md:justify-end">
 <a href="#" class="button-link bg-green-600 hover:bg-green-700 text-white font-bold py-1 px-2 rounded-full mr-1" onclick="exportToExcel()">
     Exportar a Excel
 </a>
@@ -89,8 +99,8 @@
                         </svg>
                 </button>
                     </form>
-                     <a class="m-1 button-link bg-white hover:bg-unimagOrange text-white font-bold py-1 px-2 rounded-full">
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:serif="http://www.serif.com/" width="18" height="18" viewBox="0 0 64 64" version="1.1" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+                     <a href="{{ url('/listado-proximo-graduado/'.$formulario->id)}}" class="m-1 button-link bg-white hover:bg-unimagOrange text-white font-bold py-1 px-2 rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:serif="http://www.serif.com/" width="16" height="16" viewBox="0 0 64 64" version="1.1" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
                            <rect id="Icons" x="-896" y="-256" width="1280" height="800" style="fill:none;"/>
                            <g id="Icons1" serif:id="Icons">
                               <g id="Strike"/>
