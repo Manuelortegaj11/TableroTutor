@@ -151,7 +151,7 @@
     >{{ isset($formulario->observaciones_examen_suficiencia) ? $formulario->observaciones_examen_suficiencia : old("observaciones_examen_suficiencia") }}</textarea>
 </div>
 
-
+//Desde aca comenzamos hoy 11 de octubre
       </div>
       <div id="tab3" class="tabcontent hidden">
          <!-- Contenido para el tercer tab -->
