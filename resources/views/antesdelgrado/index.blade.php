@@ -179,8 +179,10 @@
          </div>
       </div>
       <div id="tab4" class="tabcontent hidden">
+
+         <h2 class="text-2xl font-bold mb-4">Opción de Grado</h2>
          <div class="md:w-1/3 md:mr-4 mb-2">
-            <label class="block text-gray-700 text-sm font-bold mb-1" for="opcion_grado">Opción de Grado:</label>
+            <label class="block text-gray-700 text-sm font-bold mb-1" for="opcion_grado">Modalidad:</label>
             <select id="opcion_grado" {{ isset($readonly) && $readonly ? 'disabled' : '' }} name="opcion_grado" class=" pl-1 py-1 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md w-full md:w-auto"  >
                <option value="NULL"{{ (isset($formulario->opcion_grado) && $formulario->opcion_grado == 'NULL') ? 'selected' : 'NULL' }}>Seleccionar</option>
                <option value="practicas"{{ (isset($formulario->opcion_grado) && $formulario->opcion_grado == 'practicas') ? 'selected' : '' }}>Prácticas</option>
@@ -326,6 +328,7 @@
          </div>
       </div>
       <div id="tab5" class="tabcontent hidden">
+         <h2 class="text-2xl font-bold mb-4">General</h2>
          <div class="mb-4">
             <label for="grado" class="block text-gray-700 text-sm font-bold mb-1">¿Ganó el requisito de grado?</label>
             <div class="mt-1">
