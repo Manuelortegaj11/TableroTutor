@@ -8,6 +8,6 @@ class egresadosController extends Controller
 {
     public function index()
     {
-        return view('listaegresados.index');
+        return view('home.listaegresados.index');
     }
 }

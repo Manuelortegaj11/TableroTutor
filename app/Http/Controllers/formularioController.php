@@ -10,7 +10,7 @@ class formularioController extends Controller
 {
     public function index()
     {
-    return view('formularios.index');
+    return view('home.formularios.index');
     }
     public function store(Request $request){
         $formulario = $request->except('_token');

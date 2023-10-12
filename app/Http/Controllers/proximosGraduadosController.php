@@ -12,14 +12,14 @@ class proximosGraduadosController extends Controller
     public function index()
     {
         $datos['formularios']=Formulario::paginate(3);
-        return view('proximosgraduados.index', $datos);
+        return view('home.proximosgraduados.index', $datos);
     }
     public function show($id)
     {
         $formulario = Formulario::findOrFail($id);
 
 
-return view('proximosgraduados.show', compact('formulario'))
+return view('home.proximosgraduados.show', compact('formulario'))
     ->with('mensaje', 'Terminaste revisión👀');
 
     }
@@ -27,7 +27,7 @@ return view('proximosgraduados.show', compact('formulario'))
     {
         $formulario = Formulario::findOrFail($id);
 
-        return view('proximosgraduados.edit', compact('formulario'));
+        return view('home.proximosgraduados.edit', compact('formulario'));
     }
     public function update($id)
     {

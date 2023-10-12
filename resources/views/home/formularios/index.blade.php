@@ -1,4 +1,4 @@
-@extends('home.layout')
+@extends('home.nav_content_footer.layout')
 
 @section('content')
 <style>
