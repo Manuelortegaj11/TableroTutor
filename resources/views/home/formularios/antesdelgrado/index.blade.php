@@ -458,8 +458,25 @@
        }
    });
 </script>
-<script>//Tab 3
+@section('script')
+        @if(isset($formulario->ganador_requisito_ingles))
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    // Establecer el valor inicial
+                    var ganadorRequisitoInglesValue = "{{ $formulario->ganador_requisito_ingles }}";
+                    document.getElementById('ganador_requisito_ingles').value = ganadorRequisitoInglesValue;
 
+                    // Disparar manualmente el evento change
+                    var event = new Event('change');
+                    document.getElementById('ganador_requisito_ingles').dispatchEvent(event);
+
+                    // Agregar el event listener
+                    document.getElementById('ganador_requisito_ingles').addEventListener('change', mostrarOpciones);
+                });
+            </script>
+        @endif
+    @show
+<script>//Tab 3
    function mostrarOpciones() {
      var seleccion = document.getElementById("ganador_requisito_ingles").value;
      var opcionesIngles = document.getElementById("como_gano_requisito_ingles");
