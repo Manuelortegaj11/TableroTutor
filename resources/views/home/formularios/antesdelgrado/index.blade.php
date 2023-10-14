@@ -459,6 +459,7 @@
    });
 </script>
 <script>//Tab 3
+
    function mostrarOpciones() {
      var seleccion = document.getElementById("ganador_requisito_ingles").value;
      var opcionesIngles = document.getElementById("como_gano_requisito_ingles");
@@ -490,6 +491,7 @@
    });
 </script>
 <script>//Tab 2
+document.addEventListener('DOMContentLoaded', function() {
    // Manejar la visibilidad de los elementos según el condicional si estudia derecho o otro
      document.getElementById('programa_cursado').addEventListener('change', function () {
        if (this.value === 'Derecho') {
@@ -508,6 +510,22 @@
          observaciones_examen_suficiencia.style.display = (this.value === 'si') ? 'block' : 'none';
        });
      });
+    //Mejorando el despligue correcto del formulario para funciones como editar y ver
+    var programaCursado = document.getElementById('programa_cursado');
+    var changeEvent = new Event('change');
+    programaCursado.dispatchEvent(changeEvent);
+// Después de haber configurado tus event listeners, simula el evento de cambio inicial
+    var realizoExamenSuficienciaRadios = document.querySelectorAll('input[name="realizo_examen_suficiencia"]');
+
+// Encuentra el radio button que está marcado (seleccionado) inicialmente
+    var radioSeleccionado = Array.from(realizoExamenSuficienciaRadios).find(radio => radio.checked);
+
+// Si se encuentra un radio button seleccionado, simula el evento de cambio
+    if (radioSeleccionado) {
+        var changeEvent = new Event('change');
+        radioSeleccionado.dispatchEvent(changeEvent);
+        }
+  });
 </script>
 <script>//Movimiento tabs
    function openTab(evt, tabName) {
