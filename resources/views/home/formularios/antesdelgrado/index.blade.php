@@ -431,51 +431,62 @@
      });
    });
 </script>
-<script>
-   // JavaScript para mostrar/ocultar campos según la opción seleccionada
-   var opcionGradoSelect = document.getElementById('opcion_grado');
-   var camposPracticasPasantia = document.getElementById('campos_practicas_pasantia');
-   var camposDiplomadoProyecto = document.getElementById('campos_diplomado_proyecto');
-   var camposExoneracion = document.getElementById('campos_exoneracion');
 
-   opcionGradoSelect.addEventListener('change', function() {
-       if (this.value === 'practicas' || this.value === 'pasantia') {
-           camposPracticasPasantia.style.display = 'block';
-           camposDiplomadoProyecto.style.display = 'none';
-           camposExoneracion.style.display = 'none';
-       } else if (this.value === 'diplomado' || this.value === 'proyecto_grado') {
-           camposPracticasPasantia.style.display = 'none';
-           camposDiplomadoProyecto.style.display = 'block';
-           camposExoneracion.style.display = 'none';
-       } else if (this.value === 'exoneracion_saber_pro') {
-           camposPracticasPasantia.style.display = 'none';
-           camposDiplomadoProyecto.style.display = 'none';
-           camposExoneracion.style.display = 'block';
-       } else {
-           camposPracticasPasantia.style.display = 'none';
-           camposDiplomadoProyecto.style.display = 'none';
-           camposExoneracion.style.display = 'none';
-       }
-   });
-</script>
-@section('script')
-        @if(isset($formulario->ganador_requisito_ingles))
-            <script>
-                document.addEventListener('DOMContentLoaded', function () {
-                    // Establecer el valor inicial
-                    var ganadorRequisitoInglesValue = "{{ $formulario->ganador_requisito_ingles }}";
-                    document.getElementById('ganador_requisito_ingles').value = ganadorRequisitoInglesValue;
+@if(isset($formulario->opcion_grado))
+    @section('script')
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var opcionGradoSelect = document.getElementById('opcion_grado');
+                var camposPracticasPasantia = document.getElementById('campos_practicas_pasantia');
+                var camposDiplomadoProyecto = document.getElementById('campos_diplomado_proyecto');
+                var camposExoneracion = document.getElementById('campos_exoneracion');
 
-                    // Disparar manualmente el evento change
-                    var event = new Event('change');
-                    document.getElementById('ganador_requisito_ingles').dispatchEvent(event);
-
-                    // Agregar el event listener
-                    document.getElementById('ganador_requisito_ingles').addEventListener('change', mostrarOpciones);
+                opcionGradoSelect.addEventListener('change', function() {
+                    if (this.value === 'practicas' || this.value === 'pasantia') {
+                        camposPracticasPasantia.style.display = 'block';
+                        camposDiplomadoProyecto.style.display = 'none';
+                        camposExoneracion.style.display = 'none';
+                    } else if (this.value === 'diplomado' || this.value === 'proyecto_grado') {
+                        camposPracticasPasantia.style.display = 'none';
+                        camposDiplomadoProyecto.style.display = 'block';
+                        camposExoneracion.style.display = 'none';
+                    } else if (this.value === 'exoneracion_saber_pro') {
+                        camposPracticasPasantia.style.display = 'none';
+                        camposDiplomadoProyecto.style.display = 'none';
+                        camposExoneracion.style.display = 'block';
+                    } else {
+                        camposPracticasPasantia.style.display = 'none';
+                        camposDiplomadoProyecto.style.display = 'none';
+                        camposExoneracion.style.display = 'none';
+                    }
                 });
-            </script>
-        @endif
-    @show
+
+                var event = new Event('change');
+                opcionGradoSelect.dispatchEvent(event);
+            });
+        </script>
+    @endsection
+@endif
+
+@section('script')
+    @if(isset($formulario->ganador_requisito_ingles))
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                // Establecer el valor inicial
+                var ganadorRequisitoInglesValue = "{{ $formulario->ganador_requisito_ingles }}";
+                document.getElementById('ganador_requisito_ingles').value = ganadorRequisitoInglesValue;
+
+                // Disparar manualmente el evento change
+                var event = new Event('change');
+                document.getElementById('ganador_requisito_ingles').dispatchEvent(event);
+
+                // Agregar el event listener
+                document.getElementById('ganador_requisito_ingles').addEventListener('change', mostrarOpciones);
+            });
+        </script>
+    @endif
+@show
+
 <script>//Tab 3
    function mostrarOpciones() {
      var seleccion = document.getElementById("ganador_requisito_ingles").value;
@@ -517,7 +528,6 @@ document.addEventListener('DOMContentLoaded', function() {
            realizo_examen_suficiencia.style.display = 'none';
        }
      });
-
      // Manejar la visibilidad condicional de los elementos para el programa de derecho
      document.getElementById('observaciones_examen_suficiencia').style.display = 'none'
      document.getElementById('realizo_examen_suficiencia').style.display = 'none'; // Ocultar inicialmente
