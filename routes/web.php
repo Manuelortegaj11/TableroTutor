@@ -25,3 +25,5 @@ Route::resource('formularios',formularioController::class);
 Route::resource('antesgrado',antesGradoController::class);
 Route::resource('listado-proximo-graduado',proximosGraduadosController::class);
 Route::resource('lista-egresados',egresadosController::class);
+Route::get('/exportar-proximos-graduados', [proximosGraduadosController::class, 'export'])->name('exportar.proximos.graduados');
+

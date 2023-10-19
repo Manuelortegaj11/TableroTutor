@@ -8,6 +8,6 @@ class antesGradoController extends Controller
 {
     public function create()
     {
-        return view('antesdelgrado.create');
+        return view('home.formularios.antesdelgrado.create');
     }
 }

@@ -434,33 +434,80 @@
      });
    });
 </script>
-<script>
-   // JavaScript para mostrar/ocultar campos según la opción seleccionada
-   var opcionGradoSelect = document.getElementById('opcion_grado');
-   var camposPracticasPasantia = document.getElementById('campos_practicas_pasantia');
-   var camposDiplomadoProyecto = document.getElementById('campos_diplomado_proyecto');
-   var camposExoneracion = document.getElementById('campos_exoneracion');
+@section('script2')
+@if(isset($formulario->opcion_grado))
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var opcionGradoSelect = document.getElementById('opcion_grado');
+                var camposPracticasPasantia = document.getElementById('campos_practicas_pasantia');
+                var camposDiplomadoProyecto = document.getElementById('campos_diplomado_proyecto');
+                var camposExoneracion = document.getElementById('campos_exoneracion');
 
-   opcionGradoSelect.addEventListener('change', function() {
-       if (this.value === 'practicas' || this.value === 'pasantia') {
-           camposPracticasPasantia.style.display = 'block';
-           camposDiplomadoProyecto.style.display = 'none';
-           camposExoneracion.style.display = 'none';
-       } else if (this.value === 'diplomado' || this.value === 'proyecto_grado') {
-           camposPracticasPasantia.style.display = 'none';
-           camposDiplomadoProyecto.style.display = 'block';
-           camposExoneracion.style.display = 'none';
-       } else if (this.value === 'exoneracion_saber_pro') {
-           camposPracticasPasantia.style.display = 'none';
-           camposDiplomadoProyecto.style.display = 'none';
-           camposExoneracion.style.display = 'block';
-       } else {
-           camposPracticasPasantia.style.display = 'none';
-           camposDiplomadoProyecto.style.display = 'none';
-           camposExoneracion.style.display = 'none';
-       }
-   });
-</script>
+                function mostrarCamposSegunOpcion() {
+                    var opcionSeleccionada = opcionGradoSelect.value;
+
+                    camposPracticasPasantia.style.display = (opcionSeleccionada === 'practicas' || opcionSeleccionada === 'pasantia') ? 'block' : 'none';
+                    camposDiplomadoProyecto.style.display = (opcionSeleccionada === 'diplomado' || opcionSeleccionada === 'proyecto_grado') ? 'block' : 'none';
+                    camposExoneracion.style.display = (opcionSeleccionada === 'exoneracion_saber_pro') ? 'block' : 'none';
+                }
+
+                opcionGradoSelect.addEventListener('change', mostrarCamposSegunOpcion);
+
+                // Disparar manualmente el evento change al cargar la página
+                var event = new Event('change');
+                opcionGradoSelect.dispatchEvent(event);
+            });
+        </script>
+@endif
+@show
+
+        <script>
+                var opcionGradoSelect = document.getElementById('opcion_grado');
+                var camposPracticasPasantia = document.getElementById('campos_practicas_pasantia');
+                var camposDiplomadoProyecto = document.getElementById('campos_diplomado_proyecto');
+                var camposExoneracion = document.getElementById('campos_exoneracion');
+
+                opcionGradoSelect.addEventListener('change', function() {
+                    if (this.value === 'practicas' || this.value === 'pasantia') {
+                        camposPracticasPasantia.style.display = 'block';
+                        camposDiplomadoProyecto.style.display = 'none';
+                        camposExoneracion.style.display = 'none';
+                    } else if (this.value === 'diplomado' || this.value === 'proyecto_grado') {
+                        camposPracticasPasantia.style.display = 'none';
+                        camposDiplomadoProyecto.style.display = 'block';
+                        camposExoneracion.style.display = 'none';
+                    } else if (this.value === 'exoneracion_saber_pro') {
+                        camposPracticasPasantia.style.display = 'none';
+                        camposDiplomadoProyecto.style.display = 'none';
+                        camposExoneracion.style.display = 'block';
+                    } else {
+                        camposPracticasPasantia.style.display = 'none';
+                        camposDiplomadoProyecto.style.display = 'none';
+                        camposExoneracion.style.display = 'none';
+                    }
+                });
+        </script>
+
+@section('script')
+
+    @if(isset($formulario->ganador_requisito_ingles))
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                // Establecer el valor inicial
+                var ganadorRequisitoInglesValue = "{{ $formulario->ganador_requisito_ingles }}";
+                document.getElementById('ganador_requisito_ingles').value = ganadorRequisitoInglesValue;
+
+                // Disparar manualmente el evento change
+                var event = new Event('change');
+                document.getElementById('ganador_requisito_ingles').dispatchEvent(event);
+
+                // Agregar el event listener
+                document.getElementById('ganador_requisito_ingles').addEventListener('change', mostrarOpciones);
+            });
+        </script>
+    @endif
+@show
+
 <script>//Tab 3
    function mostrarOpciones() {
      var seleccion = document.getElementById("ganador_requisito_ingles").value;
@@ -493,6 +540,7 @@
    });
 </script>
 <script>//Tab 2
+document.addEventListener('DOMContentLoaded', function() {
    // Manejar la visibilidad de los elementos según el condicional si estudia derecho o otro
      document.getElementById('programa_cursado').addEventListener('change', function () {
        if (this.value === 'Derecho') {
@@ -501,7 +549,6 @@
            realizo_examen_suficiencia.style.display = 'none';
        }
      });
-
      // Manejar la visibilidad condicional de los elementos para el programa de derecho
      document.getElementById('observaciones_examen_suficiencia').style.display = 'none'
      document.getElementById('realizo_examen_suficiencia').style.display = 'none'; // Ocultar inicialmente
@@ -511,6 +558,22 @@
          observaciones_examen_suficiencia.style.display = (this.value === 'si') ? 'block' : 'none';
        });
      });
+    //Mejorando el despligue correcto del formulario para funciones como editar y ver
+    var programaCursado = document.getElementById('programa_cursado');
+    var changeEvent = new Event('change');
+    programaCursado.dispatchEvent(changeEvent);
+// Después de haber configurado tus event listeners, simula el evento de cambio inicial
+    var realizoExamenSuficienciaRadios = document.querySelectorAll('input[name="realizo_examen_suficiencia"]');
+
+// Encuentra el radio button que está marcado (seleccionado) inicialmente
+    var radioSeleccionado = Array.from(realizoExamenSuficienciaRadios).find(radio => radio.checked);
+
+// Si se encuentra un radio button seleccionado, simula el evento de cambio
+    if (radioSeleccionado) {
+        var changeEvent = new Event('change');
+        radioSeleccionado.dispatchEvent(changeEvent);
+        }
+  });
 </script>
 <script>//Movimiento tabs
    function openTab(evt, tabName) {

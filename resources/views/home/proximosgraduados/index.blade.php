@@ -1,4 +1,4 @@
-@extends('home.layout')
+@extends('home.nav_content_footer.layout')
 @section('content')
 
 @if(Session::has('mensaje'))
@@ -28,7 +28,7 @@
    <div class="container mx-auto p-4">
       <h1 class="text-2xl font-bold mb-4">Listado de Próximos Graduados</h1>
 <div class="flex justify-center md:justify-end">
-<a href="#" class="button-link bg-green-600 hover:bg-green-700 text-white font-bold py-1 px-2 rounded-full mr-1" onclick="exportToExcel()">
+<a href="{{ route('exportar.proximos.graduados') }}" class="button-link bg-green-600 hover:bg-green-700 text-white font-bold py-1 px-2 rounded-full mr-1" onclick="exportToExcel()">
     Exportar a Excel
 </a>
 </div>

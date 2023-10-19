@@ -168,7 +168,7 @@
 
 <button class="group relative h-12 w-48 overflow-hidden rounded-lg bg-unimagBlue text-lg shadow">
     <div class="absolute inset-0 w-3 bg-unimagOrange transition-all duration-[250ms] ease-out group-hover:w-full"></div>
-    <span class="relative text-black group-hover:text-white">Formularios</span>
+    <span class="relative text-white group-hover:text-black">Formularios</span>
     <svg class="w-5 h-5 absolute top-1/2 right-4 transform -translate-y-1/2 fill-current text-black group-hover:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
         <path class="arrow" d="M12 8.59l1.41 1.41 4.59-4.59 1.41 1.41-6 6a1 1 0 0 1-1.41 0l-6-6 1.41-1.41 4.59 4.59z"/>
     </svg>

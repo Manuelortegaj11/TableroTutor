@@ -1,4 +1,4 @@
-@extends('home.index')
+@extends('home.nav_content_footer.layout')
 
 @section('content')
 
