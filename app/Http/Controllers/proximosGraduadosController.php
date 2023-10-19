@@ -9,7 +9,7 @@ class proximosGraduadosController extends Controller
 {
     public function index()
     {
-        $datos['formularios']=Formulario::paginate(3);
+        $datos['formularios']=Formulario::paginate(10);
         return view('home.proximosgraduados.index', $datos);
     }
     public function show($id)

@@ -431,11 +431,34 @@
      });
    });
 </script>
-
+@section('script2')
 @if(isset($formulario->opcion_grado))
-    @section('script')
         <script>
             document.addEventListener('DOMContentLoaded', function () {
+                var opcionGradoSelect = document.getElementById('opcion_grado');
+                var camposPracticasPasantia = document.getElementById('campos_practicas_pasantia');
+                var camposDiplomadoProyecto = document.getElementById('campos_diplomado_proyecto');
+                var camposExoneracion = document.getElementById('campos_exoneracion');
+
+                function mostrarCamposSegunOpcion() {
+                    var opcionSeleccionada = opcionGradoSelect.value;
+
+                    camposPracticasPasantia.style.display = (opcionSeleccionada === 'practicas' || opcionSeleccionada === 'pasantia') ? 'block' : 'none';
+                    camposDiplomadoProyecto.style.display = (opcionSeleccionada === 'diplomado' || opcionSeleccionada === 'proyecto_grado') ? 'block' : 'none';
+                    camposExoneracion.style.display = (opcionSeleccionada === 'exoneracion_saber_pro') ? 'block' : 'none';
+                }
+
+                opcionGradoSelect.addEventListener('change', mostrarCamposSegunOpcion);
+
+                // Disparar manualmente el evento change al cargar la página
+                var event = new Event('change');
+                opcionGradoSelect.dispatchEvent(event);
+            });
+        </script>
+@endif
+@show
+
+        <script>
                 var opcionGradoSelect = document.getElementById('opcion_grado');
                 var camposPracticasPasantia = document.getElementById('campos_practicas_pasantia');
                 var camposDiplomadoProyecto = document.getElementById('campos_diplomado_proyecto');
@@ -460,15 +483,10 @@
                         camposExoneracion.style.display = 'none';
                     }
                 });
-
-                var event = new Event('change');
-                opcionGradoSelect.dispatchEvent(event);
-            });
         </script>
-    @endsection
-@endif
 
 @section('script')
+
     @if(isset($formulario->ganador_requisito_ingles))
         <script>
             document.addEventListener('DOMContentLoaded', function () {
